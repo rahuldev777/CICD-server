@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  back-end:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: back-end
+    ports:
+      - "9090:5000"
+    volumes:
+      - app-data:/app/logs
+    networks:
+      - app-network
+
+volumes:
+  app-data:
+
+networks:
+  app-network:
+    driver: bridge

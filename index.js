@@ -31,7 +31,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/todos", todoRoutes);
 
 app.get("/", (req, res) => {
-  res.send("API is running...");
+  res.send("API is running onn local test 123");
 });
 
 const PORT = process.env.PORT || 5000;
